@@ -10,7 +10,7 @@ namespace Head_First_Design_Patterns
              FlyBehavior = new FlyWithWings();
         }
 
-        public void Display()
+        public override void Display()
         {
             Console.WriteLine("I'm a merllad duck ");
         }
