@@ -1,24 +1,37 @@
-﻿using Head_First_Design_Patterns.Contracts;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using Head_First_Design_Patterns.Contracts;
 
 namespace Head_First_Design_Patterns.Models
 {
     public class WeatherData : ISubject
     {
+        private List<IObserver> _observers;
 
-
-        public void RegisterObserver()
+        public WeatherData()
         {
-            throw new System.NotImplementedException();
+            _observers = new List<IObserver>();
         }
 
-        public void RemoveObserver()
+
+
+        public void RegisterObserver(IObserver observer)
         {
-            throw new System.NotImplementedException();
+            _observers.Add(observer);
         }
 
-        public void NotifyObserver()
+        public void RemoveObserver(IObserver observer)
         {
-            throw new System.NotImplementedException();
+            _observers.Remove(observer);
+        }
+
+        public void NotifyObservers()
+        {
+            foreach (var observer in _observers)
+            {
+                observer.Update();
+            }
         }
     }
 }

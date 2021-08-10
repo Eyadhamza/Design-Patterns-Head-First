@@ -2,8 +2,8 @@
 {
     public interface ISubject
     {
-        public void RegisterObserver();
-        public void RemoveObserver();
-        public void NotifyObserver();
+        public void RegisterObserver(IObserver observer);
+        public void RemoveObserver(IObserver observer);
+        public void NotifyObservers();
     }
 }
