@@ -21,5 +21,14 @@ namespace Head_First_Design_Patterns
         {
             Console.WriteLine("all ducks swim man");
         }
+
+        public void SetFlyBehavior(IFlyBehavior fb)
+        {
+            FlyBehavior = fb;
+        }
+        public void SetQuackBehavior(IQuackBehavior fb)
+        {
+            QuackBehavior = fb;
+        }
     }
 }
