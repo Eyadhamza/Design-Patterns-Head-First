@@ -2,6 +2,9 @@
 {
     public class Quack : IQuackBehavior
     {
-
+        public void quack()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

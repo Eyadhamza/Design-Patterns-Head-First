@@ -2,7 +2,16 @@
 {
     public abstract class Duck
     {
-        protected IQuackBehavior _quackBehavior;
-        protected IFlyBehavior _flyBehavior;
+        protected IQuackBehavior QuackBehavior;
+        protected IFlyBehavior FlyBehavior;
+
+        public void PerformQuack()
+        {
+            QuackBehavior.quack();
+        }
+        public void PerformFly()
+        {
+            FlyBehavior.fly();
+        }
     }
 }

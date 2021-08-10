@@ -2,6 +2,9 @@
 {
     public class FlyWithWings : IFlyBehavior
     {
-
+        public void fly()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

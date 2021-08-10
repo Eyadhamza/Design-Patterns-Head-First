@@ -1,11 +1,18 @@
-﻿namespace Head_First_Design_Patterns
+﻿using System;
+
+namespace Head_First_Design_Patterns
 {
     public class MallardDuck : Duck
     {
         public MallardDuck()
         {
-             _quackBehavior = new Quack();
-             _flyBehavior = new FlyWithWings();
+             QuackBehavior = new Quack();
+             FlyBehavior = new FlyWithWings();
+        }
+
+        public void Display()
+        {
+            Console.WriteLine("I'm a merllad duck ");
         }
     }
 }
