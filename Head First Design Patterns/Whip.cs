@@ -6,14 +6,23 @@
         {
             _beverage = beverage;
         }
-        public string Description
+        public override string Description
         {
-            get => _description + "Whip";
+            get => _beverage.Description + ", Whip";
             set => _description = value;
         }
+
+        // public string Description()
+        // {
+        //     // delegate the call to know the description to the beverage object
+        //     // then we add whip to it
+        //     return _beverage.Description + "Whip";
+        // }
+
         public override double Cost()
         {
             // delegate the call to know the cost to the beverage object
+            // then we add the cost to it
             return _beverage.Cost() + .10;
         }
     }

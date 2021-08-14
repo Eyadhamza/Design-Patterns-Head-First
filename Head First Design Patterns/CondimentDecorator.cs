@@ -4,7 +4,7 @@
     {
         protected Beverage _beverage;
 
-        public string Description
+        public override string Description
         {
             get => _description;
             set => _description = value;

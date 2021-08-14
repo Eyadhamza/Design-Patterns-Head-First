@@ -6,9 +6,9 @@
         {
             _beverage = beverage;
         }
-        public string Description
+        public override string Description
         {
-            get => _description + "Soy";
+            get => _beverage.Description + ", Soy";
             set => _description = value;
         }
         public override double Cost()

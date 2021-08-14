@@ -2,10 +2,16 @@
 {
     public class DarkRoast : Beverage
     {
-        public DarkRoast()
+
+
+        public override string Description
         {
-            _description = "this is DarkRoast";
+            get => "this is DarkRoast ";
+
+            set { }
         }
+
+
         public override double Cost()
         {
             return .99;

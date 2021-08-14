@@ -2,9 +2,12 @@
 {
     public class Decaf : Beverage
     {
-        public Decaf()
+
+        public override string Description
         {
-            _description = "this is Decaf";
+            get => "this is Decaf ";
+
+            set { }
         }
         public override double Cost()
         {

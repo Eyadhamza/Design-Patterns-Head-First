@@ -2,10 +2,16 @@
 {
     public class HouseBlend : Beverage
     {
-        public HouseBlend()
+
+
+        public override string Description
         {
-            _description = "this is House Blend";
+            get => "this is House Blend ";
+
+            set { }
         }
+
+
         public override double Cost()
         {
             return .89;

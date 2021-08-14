@@ -2,10 +2,14 @@
 {
     public class Espresso : Beverage
     {
-        public Espresso()
+
+        public override string Description
         {
-            _description = "this is espresso";
+            get => "this is espresso ";
+
+            set { }
         }
+
         public override double Cost()
         {
             return 1.99;

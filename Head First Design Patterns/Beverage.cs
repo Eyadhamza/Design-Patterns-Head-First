@@ -4,12 +4,7 @@
     {
         protected string _description = "Unknown Beverage";
 
-        public string Description
-        {
-            get => _description;
-            set => _description = value;
-        }
-
+        public abstract string Description { get; set; }
         public abstract double Cost();
     }
 }
