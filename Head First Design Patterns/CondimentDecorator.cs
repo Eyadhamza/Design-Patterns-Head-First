@@ -2,7 +2,7 @@
 {
     public abstract class CondimentDecorator : Beverage
     {
-        private Beverage _beverage;
+        protected Beverage _beverage;
 
         public string Description
         {
