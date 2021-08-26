@@ -8,5 +8,15 @@
         {
             _livingRoom = livingRoom;
         }
+
+        public void Off()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void On()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

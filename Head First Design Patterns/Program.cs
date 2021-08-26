@@ -40,14 +40,14 @@ namespace Head_First_Design_Patterns
             remoteControl.SetCommand(3, stereoOnWithCD, stereoOff);
 
             Console.WriteLine(remoteControl);
-            // remoteControl.OnButtonWasPushed(0);
-            // remoteControl.OffButtonWasPushed(0);
-            // remoteControl.OnButtonWasPushed(1);
-            // remoteControl.OffButtonWasPushed(1);
-            // remoteControl.OnButtonWasPushed(2);
-            // remoteControl.OffButtonWasPushed(2);
-            // remoteControl.OnButtonWasPushed(3);
-            // remoteControl.OffButtonWasPushed(3);
+            remoteControl.OnButtonWasPushed(0);
+            remoteControl.OffButtonWasPushed(0);
+            remoteControl.OnButtonWasPushed(1);
+            remoteControl.OffButtonWasPushed(1);
+            remoteControl.OnButtonWasPushed(2);
+            remoteControl.OffButtonWasPushed(2);
+            remoteControl.OnButtonWasPushed(3);
+            remoteControl.OffButtonWasPushed(3);
         }
     }
 }

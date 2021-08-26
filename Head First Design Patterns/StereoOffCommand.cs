@@ -11,12 +11,12 @@
 
         public void Execute()
         {
-            throw new System.NotImplementedException();
+            _stereo.On();
         }
 
         public void Undo()
         {
-            throw new System.NotImplementedException();
+            _stereo.Off();
         }
     }
 }
