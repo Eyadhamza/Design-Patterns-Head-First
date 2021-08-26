@@ -1,11 +1,14 @@
 ﻿namespace Head_First_Design_Patterns
 {
-    public class NoCommand : ICommand
+    public class GarageDoorUpCommand : ICommand
     {
-        public NoCommand()
-        {
+        private readonly GarageDoor _garageDoor;
 
+        public GarageDoorUpCommand(GarageDoor garageDoor)
+        {
+            _garageDoor = garageDoor;
         }
+
         public void Execute()
         {
             throw new System.NotImplementedException();

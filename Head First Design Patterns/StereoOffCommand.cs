@@ -1,11 +1,14 @@
 ﻿namespace Head_First_Design_Patterns
 {
-    public class NoCommand : ICommand
+    public class StereoOffCommand : ICommand
     {
-        public NoCommand()
-        {
+        private readonly Stereo _stereo;
 
+        public StereoOffCommand(Stereo stereo)
+        {
+            _stereo = stereo;
         }
+
         public void Execute()
         {
             throw new System.NotImplementedException();

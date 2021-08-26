@@ -2,6 +2,13 @@
 {
     public class LightOnCommand : ICommand
     {
+        private readonly Light _livingRoomLight;
+
+        public LightOnCommand(Light livingRoomLight)
+        {
+            _livingRoomLight = livingRoomLight;
+        }
+
         public void Execute()
         {
             throw new System.NotImplementedException();

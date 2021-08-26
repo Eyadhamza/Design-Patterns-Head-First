@@ -1,10 +1,12 @@
-﻿namespace Head_First_Design_Patterns
+﻿using System.Text;
+
+namespace Head_First_Design_Patterns
 {
     public class RemoteControl
     {
         private ICommand[] _onCommands;
         private ICommand[] _offCommands;
-        private ICommand currentCommand;
+        private ICommand _currentCommand;
 
         public RemoteControl()
         {
@@ -16,12 +18,12 @@
             for (int i = 0; i < _onCommands.Length; i++)
             {
                 // initialize all slots by a command that does nothing
-                _offCommands[0] = noCommand;
-                _onCommands[0] = noCommand;
+                _offCommands[i] = noCommand;
+                _onCommands[i] = noCommand;
 
             }
 
-            currentCommand = noCommand;
+            _currentCommand = noCommand;
         }
 
         public void SetCommand(int slot, ICommand onCommand, ICommand offCommand)
@@ -31,5 +33,32 @@
 
         }
 
+        public void OnButtonWasPushed(int slot)
+        {
+            _onCommands[slot].Execute();
+            _currentCommand = _onCommands[slot];
+        }
+        public void OffButtonWasPushed(int slot)
+        {
+            _onCommands[slot].Execute();
+            _currentCommand = _offCommands[slot];
+        }
+
+        public void UndoButtonWasPushed()
+        {
+            _currentCommand.Undo();
+        }
+
+        public override string ToString()
+        {
+            StringBuilder stringBuff = new StringBuilder();
+            stringBuff.Append("\n------ Remote Control -------\n");
+            for (int i = 0; i < _onCommands.Length; i++) {
+                stringBuff.Append("[slot " + i + "] " + _onCommands[i].GetType().Name
+                                  + " " + _offCommands[i].GetType().Name + "\n");
+            }
+            return stringBuff.ToString();
+
+        }
     }
 }
