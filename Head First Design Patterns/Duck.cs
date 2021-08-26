@@ -29,6 +29,7 @@ namespace Head_First_Design_Patterns
         public void SetQuackBehavior(IQuackBehavior fb)
         {
             QuackBehavior = fb;
+
         }
     }
 }
