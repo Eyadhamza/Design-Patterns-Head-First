@@ -15,12 +15,7 @@
 
         public static ChocolateBoiler GetInstance()
         {
-            if (_uniqueInstance == null)
-            {
-                _uniqueInstance = new ChocolateBoiler();
-            }
-
-            return _uniqueInstance;
+            return _uniqueInstance ??= new ChocolateBoiler();
         }
 
         public void Fill()
@@ -35,12 +30,7 @@
 
         private bool IsEmpty()
         {
-            if (_empty)
-            {
-                return true;
-            }
-
-            return false;
+            return _empty;
         }
     }
 }
