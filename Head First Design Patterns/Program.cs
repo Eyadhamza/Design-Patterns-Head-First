@@ -6,8 +6,11 @@ namespace Head_First_Design_Patterns
     {
         static void Main(string[] args)
         {
-            // Don't know how to implement in c#
-            // TODO
+            // HomeTheaterFacade homeTheater = new HomeTheaterFacade(
+            //     // all instances
+            //     )
+            // homeTheater.WatchMovie('12 angry men');
+            // homeTheater.EndMovie();
         }
     }
 }
