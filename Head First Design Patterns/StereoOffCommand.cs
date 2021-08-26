@@ -7,6 +7,7 @@
         public StereoOffCommand(Stereo stereo)
         {
             _stereo = stereo;
+
         }
 
         public void Execute()
