@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Head_First_Design_Patterns
 {
-    public class PancakeHouseMenu
+    public class PancakeHouseMenu : IMenu
     {
         List<MenuItem> _menuItems;
         public PancakeHouseMenu() {

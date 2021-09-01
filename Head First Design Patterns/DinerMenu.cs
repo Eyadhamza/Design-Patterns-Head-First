@@ -2,7 +2,7 @@
 
 namespace Head_First_Design_Patterns
 {
-    public class DinerMenu
+    public class DinerMenu : IMenu
     {
         private static int MAX_ITEMS = 6;
         private int _numberOfItems = 0;
