@@ -5,9 +5,9 @@ namespace Head_First_Design_Patterns
 {
     public class Waitress
     {
-        private PancakeHouseMenu _pancakeHouseMenu;
-        private DinerMenu _dinerMenu;
-        public Waitress(PancakeHouseMenu pancakeHouseMenu, DinerMenu dinerMenu) {
+        private IMenu _pancakeHouseMenu;
+        private IMenu _dinerMenu;
+        public Waitress(IMenu pancakeHouseMenu, IMenu dinerMenu) {
             _pancakeHouseMenu = pancakeHouseMenu;
             _dinerMenu = dinerMenu;
         }
