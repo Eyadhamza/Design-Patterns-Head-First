@@ -5,28 +5,16 @@ namespace Head_First_Design_Patterns
 {
     public class Waitress
     {
-        private IMenu _pancakeHouseMenu;
-        private IMenu _dinerMenu;
-        public Waitress(IMenu pancakeHouseMenu, IMenu dinerMenu) {
-            _pancakeHouseMenu = pancakeHouseMenu;
-            _dinerMenu = dinerMenu;
+        private MenuComponent _allMenus;
+
+        public Waitress(MenuComponent allMenus)
+        {
+            _allMenus = allMenus;
         }
-        public void PrintMenu() {
-            IIterator pancakeIterator = _pancakeHouseMenu.CreateIterator();
-            IIterator dinerIterator = _dinerMenu.CreateIterator();
-           Console.WriteLine("MENU\n----\nBREAKFAST");
-            printMenu(pancakeIterator);
-           Console.WriteLine("\nLUNCH");
-            printMenu(dinerIterator);
+
+        public void PrintMenu()
+        {
+            _allMenus.Print();
         }
-        private void printMenu(IIterator iterator) {
-            while (iterator.HasNext()) {
-                MenuItem menuItem = iterator.Next();
-                Console.WriteLine(menuItem.Name + ", ");
-                Console.WriteLine(menuItem.Price + " -- ");
-               Console.WriteLine(menuItem.Description);
-            }
-        }
-        // other methods here
     }
 }

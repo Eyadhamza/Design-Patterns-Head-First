@@ -1,6 +1,8 @@
-﻿namespace Head_First_Design_Patterns
+﻿using System;
+
+namespace Head_First_Design_Patterns
 {
-    public class MenuItem
+    public class MenuItem : MenuComponent
     {
         private readonly string _name;
 
@@ -22,6 +24,17 @@
             _description = description;
             _vegetarian = vegetarian;
             _price = price;
+        }
+
+        public override void Print()
+        {
+            Console.WriteLine("  " + GetName());
+            if (IsVegetarian())
+            {
+                    Console.WriteLine('v');
+            }
+            Console.WriteLine(",  " + GetPrice());
+            Console.Write("  ___ " + GetDescription());
         }
     }
 }
