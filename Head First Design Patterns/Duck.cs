@@ -10,7 +10,7 @@ namespace Head_First_Design_Patterns
         public abstract void Display();
         public void PerformQuack()
         {
-            QuackBehavior.quack();
+            QuackBehavior.DoQuack();
         }
         public void PerformFly()
         {

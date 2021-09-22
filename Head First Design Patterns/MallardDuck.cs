@@ -2,17 +2,15 @@
 
 namespace Head_First_Design_Patterns
 {
-    public class MallardDuck : Duck
+    public class MallardDuck : IQuackBehavior
     {
         public MallardDuck()
         {
-             QuackBehavior = new Quack();
-             FlyBehavior = new FlyWithWings();
         }
 
-        public override void Display()
+        public void DoQuack()
         {
-            Console.WriteLine("I'm a merllad duck ");
+            Console.WriteLine("Quack");
         }
     }
 }

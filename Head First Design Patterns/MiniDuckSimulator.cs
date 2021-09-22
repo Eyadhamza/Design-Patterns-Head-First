@@ -6,10 +6,8 @@ namespace Head_First_Design_Patterns
     {
         static void Main(string[] args)
         {
-            Duck mallard = new MallardDuck();
 
-            mallard.PerformFly();
-            mallard.PerformQuack();
+
         }
     }
 }

@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 
 namespace Head_First_Design_Patterns
 {
-    public class Quack : IQuackBehavior
+    public class RubberDuck : IQuackBehavior
     {
         public void DoQuack()
         {
-            Console.WriteLine(" quack");
+            Console.WriteLine("Squeak");
         }
     }
 }

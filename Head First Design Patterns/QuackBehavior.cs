@@ -2,6 +2,6 @@
 {
     public interface IQuackBehavior
     {
-        void quack();
+        void DoQuack();
     }
 }
