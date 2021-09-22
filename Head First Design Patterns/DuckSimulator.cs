@@ -7,17 +7,17 @@ namespace Head_First_Design_Patterns
         static void Main(string[] args)
         {
             DuckSimulator duckSimulator = new DuckSimulator();
-
-            duckSimulator.Simulate();
+            AbstractDuckFactory duckFactory = new CountingDuckFactory();
+            duckSimulator.Simulate(duckFactory);
 
         }
 
-        private void Simulate()
+        private void Simulate(AbstractDuckFactory abstractDuckFactory)
         {
-            IQuackBehavior mallardDuck = new QuackCounter(new MallardDuck());
-            IQuackBehavior redheadDuck = new QuackCounter(new RedheadDuck());
-            IQuackBehavior duckCall = new QuackCounter(new DuckCall());
-            IQuackBehavior rubberDuck = new QuackCounter(new RubberDuck());
+            IQuackBehavior mallardDuck = abstractDuckFactory.CreateMallardDuck();
+            IQuackBehavior redheadDuck = abstractDuckFactory.CreateRedHeadDuck();
+            IQuackBehavior duckCall = abstractDuckFactory.CreateDuckCall();
+            IQuackBehavior rubberDuck = abstractDuckFactory.CreateRubberDuck();
             IQuackBehavior goose = new GooseAdapter(new Goose());
 
             Console.WriteLine("\n Duck Simulator");
